@@ -1,0 +1,91 @@
+<html>
+  <head>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	
+	    <script type="text/javascript">
+      google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+		data.addColumn('string', 'Start Time');
+		data.addColumn('string', 'End Time');
+		data.addColumn('string', 'Duration');
+        data.addColumn('string', 'Status');        
+        data.addRows([strTestCases]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(data, {showRowNumber: true, width: '100%', height: '80%'});
+      }
+    </script>
+	<script type="text/javascript">
+
+      // Load Charts and the corechart and barchart packages.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Draw the pie chart and bar chart when Charts is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+	  google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable);
+	  
+      function drawChart() {
+   
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Status');
+        data.addColumn('number', 'Count');
+        data.addRows([
+          ['Passed', strPass],
+          ['Failed', strFail],
+          ['Skipped', StrSkip]
+        ]);
+
+        var piechart_options = {title:'Pie Chart: Regression Status',
+                       width:400,
+                       height:300};
+        var piechart = new google.visualization.PieChart(document.getElementById('piechart_div'));
+        piechart.draw(data, piechart_options);
+
+        var barchart_options = {title:'Barchart: Regression Status',
+                       width:450,
+                       height:300,
+                       legend: 'none'};
+        var barchart = new google.visualization.BarChart(document.getElementById('barchart_div'));
+        barchart.draw(data, barchart_options);
+		
+		        var options = {
+          title: 'Regression Status',
+          width:450,
+                       height:300,
+                       legend: 'none' };
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+		
+		  var table = new google.visualization.Table(document.getElementById('table_div1'));
+        table.draw(data, {showRowNumber: true, width: '100%', height: '15%'});
+      }
+
+</script>
+<script>
+
+
+<script src="https://static.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
+  </head>
+  <body>
+	<table class="columns">
+	<th colspan="12" bgcolor='#738e8e'>AURA AUTOMATION</th>
+      <tr>
+        <!-- <td><div id="piechart_3d" style="width: 400px; height: 200px;" style="border: 1px solid #ccc">0</div></td> -->
+        <td><div id="piechart_div" style="border: 1px solid #ccc"></div></td>
+        <td><div id="barchart_div" style="border: 1px solid #ccc"></div></td>
+		<td><div id="curve_chart" style="border: 1px solid #ccc"></div></td>		
+      </tr>	  
+    </table>
+
+	<td><div id="table_div1" style="border: 1px solid #ccc"></div></td>
+	<td><div id="table_div" style="border: 1px solid #ccc"></div></td>
+<div id="container"></div>	
+  </body>
+</html>

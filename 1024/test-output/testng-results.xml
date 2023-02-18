@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[Sample Line 1;PASS;//]]>
+    </line>
+    <line>
+      <![CDATA[Sample Line 2;INFO;//]]>
+    </line>
+    <line>
+      <![CDATA[Sample Line 3;INFO//]]>
+    </line>
+    <line>
+      <![CDATA[Sample Line 4;INFO//]]>
+    </line>
+    <line>
+      <![CDATA[Sample Line 5;INFO//]]>
+    </line>
+    <line>
+      <![CDATA[Sample Line 6]]>
+    </line>
+    <line>
+      <![CDATA[Sample Line 7]]>
+    </line>
+    <line>
+      <![CDATA[Sample Line 8]]>
+    </line>
+    <line>
+      <![CDATA[Sample Line 9]]>
+    </line>
+    <line>
+      <![CDATA[Sample Line 10]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="38" started-at="2019-11-08T05:55:10Z" finished-at="2019-11-08T05:55:10Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="38" started-at="2019-11-08T05:55:10Z" finished-at="2019-11-08T05:55:10Z">
+      <class name="com.testing.TC005">
+        <test-method status="PASS" signature="sample()[pri:0, instance:com.testing.TC005@16995df]" name="sample" duration-ms="17" started-at="2019-11-07T23:55:10Z" finished-at="2019-11-07T23:55:10Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Sample Line 1;PASS;//]]>
+            </line>
+            <line>
+              <![CDATA[Sample Line 2;INFO;//]]>
+            </line>
+            <line>
+              <![CDATA[Sample Line 3;INFO//]]>
+            </line>
+            <line>
+              <![CDATA[Sample Line 4;INFO//]]>
+            </line>
+            <line>
+              <![CDATA[Sample Line 5;INFO//]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- sample -->
+        <test-method status="PASS" signature="sample1()[pri:0, instance:com.testing.TC005@16995df]" name="sample1" duration-ms="1" started-at="2019-11-07T23:55:10Z" finished-at="2019-11-07T23:55:10Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Sample Line 6]]>
+            </line>
+            <line>
+              <![CDATA[Sample Line 7]]>
+            </line>
+            <line>
+              <![CDATA[Sample Line 8]]>
+            </line>
+            <line>
+              <![CDATA[Sample Line 9]]>
+            </line>
+            <line>
+              <![CDATA[Sample Line 10]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- sample1 -->
+      </class> <!-- com.testing.TC005 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

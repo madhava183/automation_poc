@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+	white-space: nowrap;
+	border: 1px solid black;
+}
+
+.shrink img {
+	height: 20px;
+	width: 150px;
+}
+
+.shrink img:hover {
+	width: 800px;
+	height: 500px;
+}
+
+t.PASS {
+	font-weight: bold;
+	color: green;
+}
+
+t.FAIL {
+	font-weight: bold;
+	color: red;
+}
+
+p.test {
+	font-weight: normal;
+	width: 16em;
+	word-wrap: break-word;
+}
+</style>
+</head>
+<body>
+	<table class="fixed" width="80%" align="center">
+		<tr>
+			<th colspan="6" bgcolor='#738e8e'>AUTOMATION</th>
+		</tr>
+		<tr bgcolor='#687c7d'>
+			<th><font color='#EDEEF0' size='2' face='Verdana'>SNO</font></th>
+			<th><font color='#EDEEF0' size='2' face='Verdana'>SCREEN
+					NAME</font></th>
+			<th><font color='#EDEEF0' size='2' face='Verdana'>DESCRIPTION</font></th>
+			<th><font color='#EDEEF0' size='2' face='Verdana'>STATUS</font></th>
+			<th><font color='#EDEEF0' size='2' face='Verdana'>SNAPSHOT</font></th>
+		</tr>
+		<tr bgcolor='EDEEF0'>
+			<td>1</td>
+			<td><p class="test">Lanch URL</p></td>
+			<td><p class="test">Navigation is successfull</p></td>
+			<td><t class="PASS">PASS</t></td>
+			<td><div class="shrink pic">
+					<img src='.\1.jpg' />
+				</div></td>
+		</tr>
+		<tr bgcolor='EDEEF0'>
+			<td>2</td>
+			<td><p class="test">BROWSER CLOSE</p></td>
+			<td><p class="test">Closed browser successfully</p></td>
+			<td><t class="WARNING">WARNING</t></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>
